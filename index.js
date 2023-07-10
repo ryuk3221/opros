@@ -21,7 +21,7 @@ let count = 1;
 //Максимальное количество вопросов
 let maxCount = 3;
 //Секунды таймера
-let second = 2;
+let second = 120;
 //Набранные баллы юзера
 let points = 0;
 //В эту переменную будет записываться правильный ответ рандомного вопроса
@@ -59,8 +59,9 @@ const start = () => {
             //Если таймер всплывающего окна равен 0 то
             //Отобразить постер...
             location.reload();
+            sec2 = 10;    //Обновляю секунды таймера всплывающего окна
           } else {
-            
+          
             sec2--;
             document.querySelector('.sec2').innerHTML = sec2;
           }
@@ -81,7 +82,7 @@ const renderQuestion = async () => {
   if (count < maxCount + 1) {
     //получил рандомный вопрос из массива вопросов
     const randomQuestion = questions[getRandomNum(0,2)];
-    
+    //Сохранил правильный ответ текущего вопроса
     correct = randomQuestion.correctRes;
 
     const randomQuestionHtml = `
@@ -193,8 +194,10 @@ const nextQuestion = () => {
       userResponse = checkbox.value;
     }
   });
+  //Cравниваю правльный ответ вопроса записанный в переменную correct ранее
   //Если ответ верный, увеличиваю очки
   if (userResponse === correct) {
+    //Прибавляю к очкам 1 бал + ставшиеся секунды
     points += second + 1;
   } else {
     console.log('Неправильный ответ');
@@ -215,12 +218,13 @@ const restart = () => {
 };
 
 const end = () => {
-  //Перезагружаю страницу юзера ибо ничего не придул в случае если юзер нажмет нет
+  //Перезагружаю страницу юзера ибо ничего не придумал в случае если юзер нажмет нет
   location.reload();
 }
 
-
+//Отправка  результатов
 const submit = async () => {
+  //Сохранил имэил введенный пользователем
   const userEmail = document.querySelector('.last-frame__input').value;
   document.querySelector('.last-frame__input').value = '';
   const result = {
@@ -231,10 +235,10 @@ const submit = async () => {
     method: 'PUT',
     body: result
   });
-  console.log(response);
+  
 }
 
-
+//Функция которая подбирает корректное склонение
 const getDeclination = (number) => {
   let numberString = String(number);
   const penultimateDigit = numberString[numberString.length - 2];
@@ -253,11 +257,7 @@ const getDeclination = (number) => {
   
 };
 
-const startPopupTimer = () => {
-  second = 10;
-  document.querySelector('.sec2').innerHTML = second;
-  
-}
+
 
 document.querySelector('.start-game').onclick = start;
 
