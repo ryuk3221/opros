@@ -1,6 +1,8 @@
 const ajaxLink = "https://secret.api.site/secret-hash/rest-callback.php";
 const questionsLink = "https://6490876b1e6aa71680cb6990.mockapi.io/FavoriteItems";
 
+
+//Окно с подтверждением продолжить
 let popupHtml = `
   <div class="promo">
     <h1 class="rules__title title" >Хотите продолжить?</h1>
@@ -8,6 +10,7 @@ let popupHtml = `
       <button class="da">Да</button>
       <button class="net">Нет</button>
     </div>
+    <p class="time2"><span class="sec2"></span> сек</p>
   </div>
 `;
 
@@ -18,13 +21,14 @@ let count = 1;
 //Максимальное количество вопросов
 let maxCount = 3;
 //Секунды таймера
-let second = 120;
+let second = 2;
 //Набранные баллы юзера
 let points = 0;
 //В эту переменную будет записываться правильный ответ рандомного вопроса
 let correct = '';
-
-
+//---
+let sec2 = 10;
+//Элемент в который рендерится приложение
 let changeableContent = document.querySelector('.content');
 
 
@@ -37,12 +41,25 @@ const start = () => {
     let secondHtml = document.querySelector('.sec');
     if (second === 0) {
       changeableContent.innerHTML = popupHtml;
+      startPopupTimer();
       document.querySelector('.da').onclick = restart;
       document.querySelector('.net').onclick = end;
       count = 1;
     } else {
-        secondHtml.innerHTML = second;
-        second--;
+        if (document.querySelector('.sec') != null) {
+          secondHtml.innerHTML = second;
+          second--;
+        } else {
+          if (sec2 == 0) {
+            //Если таймер всплывающего окна равен 0 то
+            //Отобразить постер...
+            location.reload();
+          } else {
+            document.querySelector('.sec2').innerHTML = sec2;
+            sec2--;
+          }
+        }
+        
     }
     
   }, 1000)
@@ -145,7 +162,7 @@ const renderQuestion = async () => {
     //Когда вопросы подошли к концу рендерю ласт фрэйм
     changeableContent.innerHTML = `
     <div class="last-frame">
-      <h1 class="last-frame__title rules__title">ВЫ НАБРАЛИ <br> <span class="points">${points} <br> </span> баллов</h1>
+      <h1 class="last-frame__title rules__title">ВЫ НАБРАЛИ <br> <span class="points">${points} <br> </span> ${getDeclination(points)}</h1>
       <p class="last-frame__text">Введите свой email, чтобы принять участие в розыгрыше:</p>
       <input class="last-frame__input" type="text" name="" id="">
       <p class="confirm-text">Нажимая отправить результаты, 
@@ -185,6 +202,8 @@ const nextQuestion = () => {
 const restart = () => {
   //Обновляю секунды таймера
   second = 120;
+  //Обнуляю баллы
+  points = 0;
   //ренндерю новый вопрос
   renderQuestion();
 };
@@ -204,8 +223,34 @@ const submit = async () => {
   };
   const response = await fetch(ajaxLink, {
     method: 'PUT',
-    body: JSON.stringify(result)
-  })
+    body: result
+  });
+  console.log(response);
+}
+
+
+const getDeclination = (number) => {
+  let numberString = String(number);
+  const penultimateDigit = numberString[numberString.length - 2];
+  const lastDigit = numberString[numberString.length - 1];
+  if (penultimateDigit == 1 || lastDigit == 0) {
+    return 'БАЛЛОВ'
+  }
+  else if (lastDigit == 1 && penultimateDigit != 1) {
+    return 'БАЛЛ'
+  }
+  else if (lastDigit > 1 && lastDigit < 5) {
+    return 'БАЛЛА'
+  } else {
+    return 'БАЛЛОВ'
+  }
+  
+};
+
+const startPopupTimer = () => {
+  second = 10;
+  document.querySelector('.sec2').innerHTML = second;
+  
 }
 
 document.querySelector('.start-game').onclick = start;

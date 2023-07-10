@@ -24,8 +24,25 @@ button {
   margin: 0 auto;
   padding: 46px 40px 50px;
   position: relative;
-  border-radius: 80px;
+  
 }
+
+.logo-left-box {
+  max-width: 446px;
+}
+
+.logo-left-box img {
+  width: 100%;
+}
+
+.logo-right-box {
+  max-width: 385px;
+}
+
+.logo-right-box img {
+  width: 100%;
+}
+
 
 .head {
   display: flex;
@@ -207,6 +224,18 @@ button {
   padding-top: 15px;
 }
 
+.time2{
+  text-align: center;
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 57px;
+  letter-spacing: -2.9px;
+  margin-top: 20px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
 .next-question {
   border-radius: 20px;
   border: 3px solid #FFF;
@@ -282,7 +311,7 @@ button {
 .confirm-text {
   color: #2C2C2C;
   text-align: center;
-  font-size: 48   px;
+  font-size: 48px;
   font-weight: 500;
   line-height: 47px;
   letter-spacing: -1.4px;
@@ -324,4 +353,329 @@ button {
 
 .title {
   margin-bottom: 100px;
+}
+
+
+@media (max-width: 1150px) {
+  .last-frame__title {
+    font-size: 110px;
+  }
+  .points {
+    font-size: 280px;
+  }
+}
+
+@media (max-width: 991px) {
+  body {
+    font-size: 25px;
+  }
+  .head {
+    gap: 50px;
+  }
+  .rules__inner {
+    height: 1000px;
+  }
+  
+  .rules__title {
+    font-size: 70px;
+  }
+  .rules__subtitle {
+    font-size: 40px;
+    margin-bottom: 15px;
+    font-size: 35px;
+    line-height: 45px;
+  }
+  .rules__item {
+    margin-bottom: 0;
+  }
+  .rules__item img {
+    width: 20px;
+  }
+  .start-game {
+    padding: 30px 0;
+    width: 100%;
+  }
+  .question__inner {
+    height: 1000px;
+  }
+  .quastion__title {
+    font-size: 80px;
+  }
+  .question__img-box{
+    max-width: 424px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .question__img-box img {
+    width: 100%;
+  }
+  .question__text {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .radio {
+    width: 42px;
+    height: 42px;
+  }
+  .radio::after {
+    width: 30px;
+    height: 30px;
+  }
+  .question__res {
+    font-size: 30px;
+  }
+  .question__item {
+    padding: 14px 20px;
+  }
+  .question__label {
+    gap: 15px;
+  }
+  .next-question {
+    padding: 0 20px;
+    width: 100%;
+    margin-top: 30px;
+    display: block;
+  }
+  .next-question img{
+    padding: 30px 0;
+    width: 100%;
+    height: 127px;
+  }
+  .last-frame {
+    height: 1000px;
+  }
+  .submit {
+    padding: 20px;
+    height: 127px;
+    width: 100%;
+  }
+  .submit img {
+    width: 100%;
+  }
+  .confirm-text {
+    font-size: 33px;  
+    line-height: 43px;   
+    padding-bottom: 40px;
+  }
+  .last-frame__text {
+    font-size: 33px;  
+    line-height: 43px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .rules__title {
+    font-size: 50px;
+  }
+  .rules__subtitle {
+    font-size: 27px;
+    line-height: 37px;
+  }
+  .rules__item {
+    line-height: 35px;
+  }
+  body {
+    font-size: 22px;
+  }
+  .rules__item img {
+    margin-left: 0;
+  }
+  .start-game img {
+    width: 100%;
+    
+  }
+  .head {
+    padding: 0 40px 50px;
+  }
+  .start-game {
+    height: 127px;
+    padding: 20px 120px;
+  }
+  .time {
+    font-size: 75px;
+  }
+  .question__inner{
+    padding: 15px 40px 20px;
+  }
+  .question__text {
+    font-size: 36px;
+    line-height: 45px;
+  }
+  .quastion__title {
+    font-size: 70px;
+    margin-bottom: 20px;
+  }
+  .last-frame__title {
+    font-size: 55px;
+  }
+  .points {
+    font-size: 250px;
+  }
+  
+}
+
+@media (max-width: 575px) {
+  .rules__inner {
+    height: 900px;
+    border-radius: 50px;
+    padding: 0 20px 20px;
+  }
+  .rules__title {
+    font-size: 35px;
+  }
+  .rules__subtitle {
+    font-size: 22px;
+    line-height: 27px;
+  }
+  body {
+    font-size: 19px;
+  }
+  .rules__item {
+    line-height: 30px;
+  }
+  .app {
+    padding: 20px;
+  }
+  .start-game {
+    height: 127px;
+    padding: 15px 80px;
+  }
+  .question__inner{
+    height: 900px;
+    padding: 10px 20px 20px;
+    border-radius: 50px;
+  }
+  .time {
+    font-size: 65px;
+    line-height: 30px;
+    margin-top: 5px;
+  }
+  .question__list {
+    padding-bottom: 15px;
+  }
+  .quastion__title {
+    font-size: 65px;
+    margin-bottom: 10px;
+  }
+  .question__text {
+    font-size: 31px;
+    line-height: 36px;
+  }
+  .start-game, .next-question img{
+    height: 100px;
+  }
+  .last-frame {
+    border-radius: 50px;
+    padding: 0 20px 20px;
+    height: 900px;
+  }
+  .submit {
+    height: 100px;
+  }  
+  .last-frame__title {
+    font-size: 50px;
+  }
+  .last-frame__text {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .confirm-text {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .last-frame__input {
+    margin-bottom: 30px;
+    height: 90px;
+    font-size: 30px;
+    border-radius: 20px;
+  }
+  .points {
+    font-size: 130px;
+  }
+}
+
+@media (max-width: 475px) {
+  .rules__subtitle {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  body {
+    font-size: 17px;
+  }
+  .rules__item img {
+    width: 15px;
+  }
+  .rules__item {
+    line-height: 27px;
+  }
+  .rules__inner {
+    height: 800px;
+    border-radius: 20px;
+  }
+  .question__inner {
+    height: 800px;
+    border-radius: 20px;
+  }
+  
+  .question__text {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .question__img-box {
+    max-width: 325px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .quastion__title {
+    font-size: 60px;
+    margin-bottom: 0px;
+  }
+  .question__text {
+    font-size: 28px;
+    line-height: 35px;
+  }
+  .question__item {
+    border-radius: 20px;
+    padding: 10px 10px;
+  }
+  .question__res {
+    font-size: 25px;
+  }
+  .radio {
+    width: 35px;
+    height: 35px;
+  }
+  .radio::after {
+    width: 23px;
+    height: 23px;
+  }
+  .time {
+    font-size: 60px;
+  }
+  .last-frame {
+    height: 800px;
+    border-radius: 20px;
+  }
+  
+  .last-frame__title {
+    margin-bottom: 20px;
+  }
+  .last-frame__text, .confirm-text {
+    font-size: 25px;
+    line-height: 32px;
+  }
+  .last-frame__input {
+    height: 80px;  
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .last-frame__title {
+    font-size: 40px;
+  }
+  .points {
+    font-size: 160px;
+    font-weight: 400;
+  }
 }
