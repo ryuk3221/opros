@@ -26,7 +26,7 @@ let second = 2;
 let points = 0;
 //В эту переменную будет записываться правильный ответ рандомного вопроса
 let correct = '';
-//---
+//Секунды таймера вспдывающег оокна с подтверждением
 let sec2 = 10;
 //Элемент в который рендерится приложение
 let changeableContent = document.querySelector('.content');
@@ -38,10 +38,15 @@ const getRandomNum = (min, max) => Math.floor(Math.random() * (max - min + 1)) +
 const start = () => {
   renderQuestion();
   setInterval(() => {
+    //Элемент который транслирует секунды
     let secondHtml = document.querySelector('.sec');
     if (second === 0) {
+      //Если секунды закончились ренендерю
+      //всплывающее окно с подтверждением
       changeableContent.innerHTML = popupHtml;
-      startPopupTimer();
+      // startPopupTimer();
+      document.querySelector('.sec2').innerHTML = sec2;
+      second = 120;
       document.querySelector('.da').onclick = restart;
       document.querySelector('.net').onclick = end;
       count = 1;
@@ -55,8 +60,9 @@ const start = () => {
             //Отобразить постер...
             location.reload();
           } else {
-            document.querySelector('.sec2').innerHTML = sec2;
+            
             sec2--;
+            document.querySelector('.sec2').innerHTML = sec2;
           }
         }
         
