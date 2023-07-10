@@ -52,9 +52,12 @@ const renderQuestion = async () => {
   //Получаю с бэка вопросы
   const qustionsResponse = await fetch(questionsLink);
   const questions = await qustionsResponse.json();
+
+  
+
   if (count < maxCount + 1) {
     //получил рандомный вопрос из массива вопросов
-    const randomQuestion = questions[getRandomNum(1,2)];
+    const randomQuestion = questions[getRandomNum(0,2)];
     
     correct = randomQuestion.correctRes;
 

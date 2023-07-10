@@ -47,10 +47,11 @@ button {
   text-align: center;
   font-size: 100px;
   line-height: normal;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: -3.425px;
   text-transform: uppercase;
   padding-top: 24px;
+  
 }
 .rules__subtitle {
   color: #2C2C2C;
@@ -73,10 +74,11 @@ button {
 }
 
 .rules__item {
-  margin-bottom: 35px;
+  margin-bottom: 55px;
   font-weight: 400;
   line-height: 41px;
   letter-spacing: -0.95px;
+  padding-bottom: 15px;
 }
 
 .rules__item:last-child {
@@ -99,6 +101,9 @@ button {
   background-color: #fff;
   border-radius: 80px;
   padding: 20px 60px;
+  height: 1277px;
+  display: flex;
+  flex-direction: column;
 }
 
 .question__img-box {
@@ -124,6 +129,7 @@ button {
   line-height: 57px;
   letter-spacing: -1.45px;
   margin-bottom: 30px;
+  margin-bottom: auto;
 }
 
 .question__item {
@@ -198,6 +204,7 @@ button {
   letter-spacing: -2.9px;
   margin-top: 20px;
   padding-bottom: 15px;
+  padding-top: 15px;
 }
 
 .next-question {
@@ -228,11 +235,14 @@ button {
   background-color: #fff;
   border-radius: 80px;
   padding: 0 40px 20px;
+  height: 1277px;
 }
 
 .last-frame__title {
   font-weight: 700;
   margin-bottom: 40px;
+  font-size: 142px;
+  padding-top: 30px;
 }
 
 .last-frame__text {
@@ -246,7 +256,7 @@ button {
 }
 
 .points {
-  font-size: 240px;
+  font-size: 322px;
   font-weight: 700;
   line-height: normal;
   letter-spacing: -8px;
@@ -266,12 +276,13 @@ button {
   display: block;
   width: 100%;
   margin-bottom: 52px;
+  height: 110px;
 }
 
 .confirm-text {
   color: #2C2C2C;
   text-align: center;
-  font-size: 44px;
+  font-size: 48   px;
   font-weight: 500;
   line-height: 47px;
   letter-spacing: -1.4px;
