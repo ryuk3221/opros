@@ -249,7 +249,7 @@ button {
   display: block;
   background-color: #E30713;
   padding: 40px;
-  width: 838px;
+  max-width: 838px;
   margin: 20px auto 0;
   cursor: pointer;
 }
@@ -324,7 +324,7 @@ button {
   border: 3px solid #FFF;
   background-color: transparent;
   cursor: pointer;
-  width: 824px;
+  max-width: 824px;
   display: block;
   margin: 0 auto;
   margin-top: 30px;
@@ -356,326 +356,356 @@ button {
 }
 
 
-@media (max-width: 1150px) {
-  .last-frame__title {
-    font-size: 110px;
-  }
-  .points {
-    font-size: 280px;
-  }
-}
-
-@media (max-width: 991px) {
-  body {
-    font-size: 25px;
-  }
-  .head {
-    gap: 50px;
-  }
-  .rules__inner {
-    height: 1000px;
+@media (max-width: 1080px) {
+  .app {
+    height: 100vh;
+    padding: 20px 70px 20px;
+    display: flex;
+    flex-direction: column;
   }
   
+  .logo-left-box, .logo-right-box {
+    max-width: 150px;
+  }
+
+  .head {
+    padding: 0 40px 20px;
+    justify-content: center;
+    gap: 80px;
+    margin-bottom: auto;
+  }
+  .rules__inner {
+    height: 70vh;
+  }
   .rules__title {
-    font-size: 70px;
+    font-size: 50px;
+    padding-top: 15px;
   }
   .rules__subtitle {
-    font-size: 40px;
-    margin-bottom: 15px;
-    font-size: 35px;
-    line-height: 45px;
+    font-size: 33px;
+    line-height: 40px;
+    margin-bottom: 10px;
   }
   .rules__item {
-    margin-bottom: 0;
+    margin-bottom: 30px;
+    font-size: 30px;
+    padding-bottom: 0;
+    font-size: 22px;
+    line-height: 25px;
   }
   .rules__item img {
     width: 20px;
   }
   .start-game {
-    padding: 30px 0;
-    width: 100%;
+    padding: 25px 150px;
+    width: 630px;
   }
   .question__inner {
-    height: 1000px;
+    height: 70vh;
   }
   .quastion__title {
-    font-size: 80px;
+    font-size: 50px;
+    padding-top: 0;
   }
-  .question__img-box{
-    max-width: 424px;
-    margin-right: auto;
-    margin-left: auto;
+  .question__img-box {
+    width: 250px;
+    margin: 0 auto; 
   }
   .question__img-box img {
     width: 100%;
   }
+  .next-question {
+    height: 116px;
+    padding: 0 20px;
+    max-width: 700px;
+  }
+  .next-question img{
+    width: 100%;
+  }
   .question__text {
     font-size: 40px;
-    line-height: 50px;
+    line-height: 47px;
+  }
+  .question__item {
+    margin-bottom: 10px;
+    padding: 15px 20px;
+    border-radius: 20px;
+    border: 2px solid #E30713;
   }
   .radio {
-    width: 42px;
-    height: 42px;
-  }
-  .radio::after {
-    width: 30px;
-    height: 30px;
+    height: 37px;
+    width: 37px;
   }
   .question__res {
     font-size: 30px;
   }
-  .question__item {
-    padding: 14px 20px;
+  .time {
+    font-size: 57px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    padding-top: 7px;
   }
   .question__label {
-    gap: 15px;
+    gap: 10px;
   }
-  .next-question {
-    padding: 0 20px;
-    width: 100%;
-    margin-top: 30px;
-    display: block;
-  }
-  .next-question img{
-    padding: 30px 0;
-    width: 100%;
-    height: 127px;
+  .radio::after{
+    width: 25px;
+    height: 25px;
   }
   .last-frame {
-    height: 1000px;
+    height: 70vh;
   }
-  .submit {
-    padding: 20px;
-    height: 127px;
-    width: 100%;
+  .rules__title {
+    font-size: 30px;
+    padding-top: 10px;
+    line-height: 35px;
+    margin-bottom: 20px;
   }
-  .submit img {
-    width: 100%;
-  }
-  .confirm-text {
-    font-size: 33px;  
-    line-height: 43px;   
-    padding-bottom: 40px;
+  .points {
+    font-size: 140px;
   }
   .last-frame__text {
-    font-size: 33px;  
-    line-height: 43px; 
+    font-size: 36px;
+    line-height: 43px;
+    margin-bottom: 26px;
+  }
+  .last-frame__input {
+    border-radius: 15px;
+    height: 80px;
+    margin-bottom: 40px;
+    border-radius: 20px;
+  }
+  .confirm-text {
+    font-size: 42px;
+  }
+  .submit {
+    height: 116px;
+    padding: 35px 15px;
+  }
+  .submit img{
+    height: 100%;
   }
 }
 
 @media (max-width: 768px) {
+  .logo-left-box, .logo-right-box {
+    max-width: 120px;
+  }
   .rules__title {
-    font-size: 50px;
+    font-size: 40px;
   }
-  .rules__subtitle {
-    font-size: 27px;
-    line-height: 37px;
-  }
+  
   .rules__item {
-    line-height: 35px;
-  }
-  body {
     font-size: 22px;
+    margin-bottom: 20px;
   }
-  .rules__item img {
-    margin-left: 0;
-  }
-  .start-game img {
-    width: 100%;
-    
-  }
-  .head {
-    padding: 0 40px 50px;
+  .app {
+    padding: 20px 30px 20px;
   }
   .start-game {
-    height: 127px;
-    padding: 20px 120px;
+    padding: 20px 30px;
+    width: 490px;
   }
-  .time {
-    font-size: 75px;
+  .next-question {
+    height: 106px;
   }
-  .question__inner{
-    padding: 15px 40px 20px;
+  .quastion__title {
+    letter-spacing: -2.8px;
+    font-size: 42px;
   }
   .question__text {
     font-size: 36px;
-    line-height: 45px;
+    line-height: 40px;
   }
-  .quastion__title {
-    font-size: 70px;
-    margin-bottom: 20px;
-  }
-  .last-frame__title {
-    font-size: 55px;
-  }
-  .points {
-    font-size: 250px;
-  }
-  
-}
-
-@media (max-width: 575px) {
-  .rules__inner {
-    height: 900px;
-    border-radius: 50px;
-    padding: 0 20px 20px;
-  }
-  .rules__title {
-    font-size: 35px;
-  }
-  .rules__subtitle {
-    font-size: 22px;
-    line-height: 27px;
-  }
-  body {
-    font-size: 19px;
-  }
-  .rules__item {
-    line-height: 30px;
-  }
-  .app {
-    padding: 20px;
-  }
-  .start-game {
-    height: 127px;
-    padding: 15px 80px;
-  }
-  .question__inner{
-    height: 900px;
-    padding: 10px 20px 20px;
-    border-radius: 50px;
-  }
-  .time {
-    font-size: 65px;
-    line-height: 30px;
-    margin-top: 5px;
-  }
-  .question__list {
-    padding-bottom: 15px;
-  }
-  .quastion__title {
-    font-size: 65px;
+  .question__item {
     margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 13px;
   }
-  .question__text {
-    font-size: 31px;
-    line-height: 36px;
-  }
-  .start-game, .next-question img{
-    height: 100px;
-  }
-  .last-frame {
-    border-radius: 50px;
-    padding: 0 20px 20px;
-    height: 900px;
+  .question__res {
+    font-size: 27px;
   }
   .submit {
-    height: 100px;
-  }  
-  .last-frame__title {
-    font-size: 50px;
+    height: 106px;
+    padding: 32px 15px;
   }
-  .last-frame__text {
-    font-size: 30px;
-    line-height: 40px;
-  }
-  .confirm-text {
-    font-size: 30px;
-    line-height: 40px;
-  }
-  .last-frame__input {
-    margin-bottom: 30px;
-    height: 90px;
-    font-size: 30px;
-    border-radius: 20px;
+  .rules__title {
+    font-size: 36px;
   }
   .points {
-    font-size: 130px;
+    font-size: 110px;
+  }
+  .last-frame__text {
+    font-size: 32px;
+  }
+  .confirm-text {
+    font-size: 36px;
   }
 }
 
-@media (max-width: 475px) {
-  .rules__subtitle {
-    font-size: 20px;
-    line-height: 25px;
-  }
-  body {
-    font-size: 17px;
-  }
-  .rules__item img {
-    width: 15px;
-  }
-  .rules__item {
-    line-height: 27px;
+@media (max-width: 610px) {
+  .app {
+    padding: 15px;
   }
   .rules__inner {
-    height: 800px;
+    padding: 15px;
+    padding-top: 0;
+  }
+  .rules__title {
+    font-size: 30px;
+    padding-top: 5px;
+  }
+  .rules__subtitle {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .rules__item {
+    font-size: 18px;
+    margin-bottom: 17px;
+  }
+  .start-game {
+    padding: 18px 80px;
+    width: 370px;
+  }
+  .start-game img {
+    width: 100%;
+  }
+  .question__inner{
+    padding: 15px;
+  }
+  .last-frame {
+    padding: 15px;
+  }
+  .submit {
+    height: 106px;
+    padding: 36px 15px;
+  }
+} 
+
+@media (max-width: 530px) {
+  .rules__subtitle {
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: auto;
+  }
+  
+  .rules__title {
+    font-size: 27px;
+  }
+  .rules__item {
+    font-size: 17px;
+    line-height: 23px;
+  }
+  .rules__item img {
+    margin-left: 10px;
+    margin-right: 5px;
+    width: 16px;
+  }
+  .start-game {
+    padding: 18px 80px;
+    width: 320px;
+  }
+  .rules__inner {
     border-radius: 20px;
   }
   .question__inner {
-    height: 800px;
     border-radius: 20px;
   }
-  
-  .question__text {
-    font-size: 30px;
-    line-height: 40px;
-  }
-  .question__img-box {
-    max-width: 325px;
-    margin-right: auto;
-    margin-left: auto;
+  .next-question {
+    height: 73px;
   }
   .quastion__title {
-    font-size: 60px;
-    margin-bottom: 0px;
-  }
-  .question__text {
-    font-size: 28px;
-    line-height: 35px;
-  }
-  .question__item {
-    border-radius: 20px;
-    padding: 10px 10px;
+    letter-spacing: -2px;
+    font-size: 36px;
+  } 
+  .question__text{
+    font-size: 32px;
+    line-height: 38px;
   }
   .question__res {
     font-size: 25px;
   }
+  .question__item {
+    padding: 8px 15px;
+  }
   .radio {
-    width: 35px;
     height: 35px;
+    width: 35px;
   }
   .radio::after {
     width: 23px;
     height: 23px;
   }
-  .time {
-    font-size: 60px;
+  .submit {
+    height: 76px;
+    padding: 22px 15px;
   }
   .last-frame {
-    height: 800px;
     border-radius: 20px;
   }
-  
-  .last-frame__title {
-    margin-bottom: 20px;
-  }
-  .last-frame__text, .confirm-text {
-    font-size: 25px;
-    line-height: 32px;
-  }
   .last-frame__input {
-    height: 80px;  
     margin-bottom: 20px;
+  }
+  .confirm-text{
+    font-size: 32px;
+    line-height: 40px;
   }
 }
 
-@media (max-width: 375px) {
-  .last-frame__title {
-    font-size: 40px;
+@media (max-width: 450px) {
+  .rules__inner {
+    height: 76vh;
   }
-  .points {
-    font-size: 160px;
-    font-weight: 400;
+  .start-game {
+    margin-top: 15px;
+  }
+  .question__inner {
+    height: 76vh;
+  }
+  .question__list {
+    margin-bottom: 20px;
+  }
+  .last-frame {
+    height: 76vh;
+  }
+  .last-frame__text {
+    font-size: 29px;
+  }
+  .confirm-text {
+    font-size: 29px;
+  }
+  .submit {
+    padding: 24px 15px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .rules__title {
+    font-size: 25px;
+  }
+  .rules__subtitle {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .rules__item {
+    font-size: 16px;
+    line-height: 21px;
+  }
+  .start-game {
+    padding: 18px 80px;
+    width: 300px;
+  }
+  .next-question {
+    padding: 0 5px;
+    height: 76px;
+  }
+  .quastion__title {
+    font-size: 34px;
+  }
+  .submit {
+    padding: 26px 15px;
+    margin-top: 10px;
+    
   }
 }
